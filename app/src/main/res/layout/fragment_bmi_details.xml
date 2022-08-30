@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/Theme.BMI">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/result_card_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_button_back"
+                android:orientation="vertical">
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/large_margin"
+                    app:dividerColor="@color/white" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:text="@string/body_mass_index"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    style="@style/white_divider"
+                    app:dividerColor="@color/white" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/bmi_result_text_view"
+                    style="@style/bmi_result"
+                    android:fontFamily="@font/poppins"
+                    tools:text="19.26" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    style="@style/white_divider"
+                    app:dividerColor="@color/white" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_margin"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:text="@string/normal_bmi_result" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/normal_range_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/normal_bmi_result"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/share_button"
+                        style="@style/result_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/share"
+                        app:icon="@drawable/share"
+                        app:strokeColor="@color/white" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/rate_button"
+                        style="@style/result_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rate"
+                        app:icon="@drawable/star"
+                        app:strokeColor="@color/white" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.gms.ads.nativead.NativeAdView>
